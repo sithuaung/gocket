@@ -1,0 +1,20 @@
+host: 0.0.0.0
+port: 6001
+stats_port: 6060
+log_level: info
+max_message_size: 102400
+# allowed_origins:
+#   - https://example.com
+#   - https://app.example.com
+# tls_cert: /path/to/cert.pem
+# tls_key: /path/to/key.pem
+
+apps:
+  - id: app-1
+    key: app-key
+    secret: app-secret
+    # webhook_url: https://example.com/webhooks
+    # client_events: true
+    # max_connections: 1000          # 0 = unlimited
+    # max_client_events_per_sec: 10  # 0 = unlimited
+    # max_backend_events_per_sec: 100 # 0 = unlimited

@@ -1,0 +1,21 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  build:
+    desc: Build the gocket binary
+    cmds:
+      - go build -o gocket .
+
+  run:
+    desc: Run the gocket server
+    env:
+      GOCKET_CONFIG_FILE: config.yaml
+    cmds:
+      - go run .
+
+  status:
+    desc: Check gocket server status
+    cmds:
+      - ./gocket status {{.CLI_ARGS}}
